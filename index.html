@@ -2,13 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arise - The System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />    <title>Arise - The System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      /* index.css */
+body {
+  /* Respektiert die "Notch" und den Home-Balken beim iPhone */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  
+  /* Verhindert Gummiband-Effekt beim Scrollen */
+  overscroll-behavior-y: none;
+  background-color: #0a1543; /* Deine sys-void Farbe */
+}
+
+/* Verhindert, dass man Texte wie auf einer Webseite markieren kann */
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Erlaubt Markieren nur in Eingabefeldern */
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
       body {
         font-family: 'Rajdhani', sans-serif;
         background-color: #0a1543;
